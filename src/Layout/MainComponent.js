@@ -1,17 +1,43 @@
 import React from 'react';
 import HeaderComponent from '../Layout/HeaderComponent';
 import FooterComponent from './FooterComponent';
+import {Redirect, Route , Switch} from 'react-router-dom';
+import routes from '../routes';
 
-export default class MainComponent extends React.Component{
+
+class MainComponent extends React.Component{
     render(){
         return(
             <div>
-                <HeaderComponent/>
-                <div className="layout-min-height">
-
+                <div className="padding-tracking">
+                    <HeaderComponent/>  
                 </div>
-                <FooterComponent/>
+                
+                <div className="layout-min-height">
+                
+                    <Switch>
+                        {routes.map((route, idx) => {
+                            return route.component ? (<Route key={idx} path={route.path}
+                                exact = {route.exact}
+                                name = {route.name}
+                                render = {props => (
+                                    <route.component { ...props} />
+                                )}
+                                />)
+                                    :(null);
+                        },
+                        )}
+                        <Redirect from="/" to="/tracking" />
+                    </Switch>
+                
+                </div>
+
+                <div>
+                    <FooterComponent/>
+                </div>
+                
             </div>
         )
     }
 }
+export default MainComponent;
