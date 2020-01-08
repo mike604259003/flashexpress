@@ -4,8 +4,14 @@ export default class Showdata extends React.Component{
     render(){
         var _data = this.props.DataRecords;
         let status = this.props.status;
+       
         return(
-            status != true ? <div className="alert alert-danger custom-message">ไม่พบข้อมูล</div>
+            status != true ? 
+            <div className="container">
+                <br/>
+                <br/>
+            <div className="alert alert-danger custom-message text-center"><i className="fa fa-close"></i>ไม่พบข้อมูล<i className="fa fa-close"></i></div>
+            </div>
             :
             <div className="container">
                 <div className="col-md-12">
@@ -22,13 +28,13 @@ export default class Showdata extends React.Component{
                     </thead>
                     <tbody>
                         { _data.map(function (obj,i){
-                            
+                            if(obj.end_flg)
                             return(
                         <tr key={i}>
                             <td>{obj.abw_code}</td>
                             <td>{obj.staff_code}</td>
-                            <td>{obj.piece}</td>
-                            <td>{obj.end_flg}</td>
+                            <td>{obj.created_date}</td>
+                            <td>{obj.name}</td>
                         </tr>
                             )
                         })

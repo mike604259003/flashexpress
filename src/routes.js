@@ -6,15 +6,19 @@ function Loading(){
     return <div>Loading...</div>;
 }
 
-const Tracking = Loadable({
-    loader: () => import ('./Tracking/Tracking'),
+const Homeshabu = Loadable({
+    loader: () => import ('./Food/Homeshabu'),
     loading: Loading,
 });
 
 
+
 const routes =[
     { path: '/', exact: true, name: "Home", component: MainComponent },
-    { path: '/tracking', name: 'Tracking', component: Tracking },
+    { path: '/homeshabu', name: 'Homeshabu', component: Homeshabu },
+  
+
+  
 ];
 
 export default routes;

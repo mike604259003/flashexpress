@@ -40,7 +40,7 @@ export default class Tracking extends React.Component{
                     data: result.data,
                     status: result.status
                 });
-                console.log('status:'+ this.state.status);
+                //console.log('status:'+ this.state.status);
                 
             },
                 (error) => {

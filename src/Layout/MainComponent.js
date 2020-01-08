@@ -1,6 +1,4 @@
 import React from 'react';
-import HeaderComponent from '../Layout/HeaderComponent';
-import FooterComponent from './FooterComponent';
 import {Redirect, Route , Switch} from 'react-router-dom';
 import routes from '../routes';
 
@@ -9,12 +7,6 @@ class MainComponent extends React.Component{
     render(){
         return(
             <div>
-                <div className="padding-tracking">
-                    <HeaderComponent/>  
-                </div>
-                
-                <div className="layout-min-height">
-                
                     <Switch>
                         {routes.map((route, idx) => {
                             return route.component ? (<Route key={idx} path={route.path}
@@ -27,15 +19,8 @@ class MainComponent extends React.Component{
                                     :(null);
                         },
                         )}
-                        <Redirect from="/" to="/tracking" />
+                        <Redirect from="/" to="/homeshabu" />
                     </Switch>
-                
-                </div>
-
-                <div>
-                    <FooterComponent/>
-                </div>
-                
             </div>
         )
     }

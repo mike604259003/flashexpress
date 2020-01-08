@@ -20,6 +20,7 @@ export default class HeaderComponent extends React.Component{
             <li><a href="">พื้นที่บริการ</a></li>
           </ul>
           </li>
+          <li><a href="#parcel">เพิ่มพัสดุ</a></li>
           <li><a href="#services">อัตราค่าบริการ</a></li>
           <li><a href="#portfolio">ข่าวสาร</a></li>
           <li><a href="#team">ติดต่อเรา</a></li>

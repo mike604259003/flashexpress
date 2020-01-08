@@ -62,6 +62,7 @@ export default class FotterComponent extends React.Component{
               </div>
               <div className="credits">Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
               </div>
+              <div className="credits">Staff Only <a href="#customer">Click!!</a></div>
             </div>
           </footer>
         

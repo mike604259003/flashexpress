@@ -21,7 +21,7 @@ export default class Search extends React.Component{
                                 
                            </div>
                            <div className="col-md-7">
-                           <input className="form-control" type="text" id="awb" name="awb" onChange={this.props.onSearchKeyWordChange} placeholder=""/>
+                           <input className="form-control" type="number" id="awb" name="awb" onChange={this.props.onSearchKeyWordChange} placeholder=""/>
                            </div>
                        </div>
 
